@@ -1,27 +1,15 @@
-<!DOCTYPE html>
-<html lang="es">
+{% extends 'layouts/base.html' %} saludo {% block title %} {%endblock%} {% block content %}
+<h1>hola {{ name }}</h1>
+<p>tienes {{age}} años de edad</p>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>saludo</title>
-</head>
-
-<body>
-    <h1>hola {{ name }}</h1>
-    <p>tienes {{age}} años de edad</p>
-
-    {% if age >= 18%}
-    <p>eres mayor de edad</p>
-    {% else %}
-    <p>eres menor de edad</p>
-    {% endif %}
-    <ul>
-        {% for number in numbers%}
-        <li>{{ number }}</li>
-        {% endfor %}
-    </ul>
-
-</body>
-
-</html>
+{% if age >= 18%}
+<p>eres mayor de edad</p>
+{% else %}
+<p>eres menor de edad</p>
+{% endif %}
+<ul>
+    {% for number in numbers%}
+    <li>{{ number }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
