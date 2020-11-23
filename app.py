@@ -7,7 +7,7 @@ def index():
     return render_template('index.html')
 
 
-@app.route('/saludo/<nombre>/<int:edad>')
+@app.route('/saludo/<nombre>/<ipythont:edad>')
 def saludar(nombre, edad):
     numeros=[1,2,3,4,5,6,7,8,9]
     return  render_template('saludo.html', name=nombre, age=edad, numbers=numeros)
