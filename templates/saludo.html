@@ -9,22 +9,19 @@
 
 <body>
     <h1>hola {{ name }}</h1>
+    <p>tienes {{age}} años de edad</p>
 
-    <p> tienes {{ age }} años de edad</p>
-
-    {% if age >= 18 %}
+    {% if age >= 18%}
     <p>eres mayor de edad</p>
     {% else %}
     <p>eres menor de edad</p>
     {% endif %}
-
     <ul>
-        {% for number in numbers %}
+        {% for number in numbers%}
         <li>{{ number }}</li>
-        {% endfor%}
+        {% endfor %}
     </ul>
-</body>
 
-</html>
+</body>
 
 </html>
