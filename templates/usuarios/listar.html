@@ -1,0 +1,34 @@
+{% extends 'layouts/base.html' %} {% block title %} usuarios {% endblock %} {% block content %} di
+
+<div class="title-page">
+    <h1>listado de usuarios</h1>
+    <a class="btn btn-success" href=" {{ url_for( 'crear_usuarios')}} ">crear</a>
+</div>
+
+<table class="table ">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>nombres</th>
+            <th>apellidos</th>
+            <th>email</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for usuario in usuarios %}
+        <tr>
+            <td>{{usuario[0] }}</td>
+            <td>{{usuario[1] }}</td>
+            <td>{{usuario[2] }}</td>
+            <td>{{usuario[3] }}</td>
+            <td>
+                <button class="btn">editar</button>
+                <button class="btn btn-danger">eliminar</button>
+
+            </td>
+        </tr>
+        {%endfor%}
+    </tbody>
+</table>
+
+{% endblock %}
